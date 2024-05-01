@@ -1,13 +1,12 @@
 import os
 
-# Criar diretórios
+
 directories = ['style', 'script']
 
 for directory in directories:
     if not os.path.exists(directory):
         os.makedirs(directory)
 
-# Conteúdo do arquivo HTML
 html_content = '''
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -36,11 +35,9 @@ html_content = '''
 </html>
 '''
 
-# Escrever o conteúdo no arquivo HTML
 with open('index.html', 'w') as file:
     file.write(html_content)
 
-# Conteúdo do arquivo script.js
 script_content = '''
 //BOTOES
 function mostrarMain(...ids) {
@@ -76,7 +73,6 @@ inputCPF.addEventListener('keypress', function(event) {
 });
 '''
 
-# Escrever o conteúdo no arquivo script.js
 with open('script/script.js', 'w') as file:
     file.write(script_content)
 
@@ -175,5 +171,5 @@ footer {
 with open('style/index.css', 'w') as file:
     file.write(style_content)
 
-print("Arquivos HTML e script.js gerados com sucesso!")
+print("Arquivos gerados com sucesso!")
 
